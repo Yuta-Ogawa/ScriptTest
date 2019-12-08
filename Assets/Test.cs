@@ -18,12 +18,14 @@ public class Boss {
     }
 
     public void Magic(int magicconsumption) {
-        while (mp > 5) {
+        if (mp > 5) {
             this.mp -= magicconsumption;
             Debug.Log("魔法攻撃をした。残りのMPは" + this.mp);
 
-        }  
+        } else {
             Debug.Log("MPが足りないため魔法が使えない。");
+        }
+           
 
     }
 }
@@ -46,6 +48,16 @@ public class Test : MonoBehaviour {
 
         lastboss.Attack();
         lastboss.Deffence(3);
+        lastboss.Magic(5);
+        lastboss.Magic(5);
+        lastboss.Magic(5);
+        lastboss.Magic(5);
+        lastboss.Magic(5);
+        lastboss.Magic(5);
+        lastboss.Magic(5);
+        lastboss.Magic(5);
+        lastboss.Magic(5);
+        lastboss.Magic(5);
         lastboss.Magic(5);
     }
     void Update() {
